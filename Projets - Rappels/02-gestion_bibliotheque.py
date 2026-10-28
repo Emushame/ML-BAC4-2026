@@ -63,4 +63,22 @@ def supprimer_livre(titre):
             print(f"Le livre '{titre}' a été supprimé de la bibliothèque.")
             return
     print(f"Le livre '{titre}' n'existe pas dans la bibliothèque.")
-#afficher_livres()
+
+def modifier_livre(titre, nouveau_titre=None, nouvel_auteur=None, nouvel_editeur=None):
+    """permet de modifier les informations d'un livre"""
+    for livre in bibliotheque:
+        if livre["titre"] == titre:
+            if nouveau_titre:
+                livre["titre"] = nouveau_titre
+            if nouvel_auteur:
+                livre["auteur"] = nouvel_auteur
+            if nouvel_editeur:
+                livre["editeur"] = nouvel_editeur
+            print(f"Le livre '{titre}' a été modifié.")
+            return
+    print(f"Le livre '{titre}' n'existe pas dans la bibliothèque.")
+
+ajouter_livre("Le Petit Prince", "Antoine de Saint-Exupéry", "Gallimard")
+
+
+afficher_livres()
