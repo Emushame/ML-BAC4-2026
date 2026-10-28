@@ -78,6 +78,10 @@ def modifier_livre(titre, nouveau_titre=None, nouvel_auteur=None, nouvel_editeur
             return
     print(f"Le livre '{titre}' n'existe pas dans la bibliothèque.")
 
+
+# creation d'une autre fonction pour tester le code
+
+
 ajouter_livre("Le Petit Prince", "Antoine de Saint-Exupéry", "Gallimard")
 
 
